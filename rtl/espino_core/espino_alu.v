@@ -8,7 +8,9 @@
 // Authors:
 // - Nicolás Villegas <navillegas@miuandes.cl>
 
-module espino_alu (
+module espino_alu #(
+  parameter Variant = 0   // 1: shifter habilitado (SLL/SRL/SRA)
+) (
   input  wire [3:0]  operator_i,
   input  wire [31:0] operand_a_i,
   input  wire [31:0] operand_b_i,
@@ -41,6 +43,10 @@ module espino_alu (
   wire [4:0] shamt;
   assign shamt = operand_b_i[4:0];
 
+  wire [31:0] sll_res = operand_a_i << shamt;
+  wire [31:0] srl_res = operand_a_i >> shamt;
+  wire [31:0] sra_res = a_s >>> shamt;
+
   // Comparisons
   wire cmp_eq, cmp_lt, cmp_ltu;
   assign cmp_eq  = (operand_a_i == operand_b_i);
@@ -69,10 +75,10 @@ module espino_alu (
       ALU_AND:  result_o = operand_a_i & operand_b_i;
       ALU_SLT:  result_o = {31'b0, cmp_lt};
       ALU_SLTU: result_o = {31'b0, cmp_ltu};
-      // Shifts disabled to save LUTs
-      // ALU_SLL:  result_o = operand_a_i << shamt;
-      // ALU_SRL:  result_o = operand_a_i >> shamt;
-      // ALU_SRA:  result_o = a_s >>> shamt;
+      // Shifts disabled to save LUTs (Variant 1 los habilita)
+      ALU_SLL:  result_o = (Variant == 1) ? sll_res : operand_a_i + operand_b_i;
+      ALU_SRL:  result_o = (Variant == 1) ? srl_res : operand_a_i + operand_b_i;
+      ALU_SRA:  result_o = (Variant == 1) ? sra_res : operand_a_i + operand_b_i;
       default:  result_o = operand_a_i + operand_b_i;
     endcase
   end

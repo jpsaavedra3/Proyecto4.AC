@@ -10,7 +10,8 @@
 
 module pochoco_soc #(
   parameter NumWords   = 512,
-  parameter MemFile    = "../sw/blink.hex"
+  parameter MemFile    = "../sw/trade.hex",
+  parameter Variant    = 0      // 0: solo software, 1: shifter, 2: instruccion ema
 ) (
   input  wire       i_Clk,
 
@@ -31,13 +32,18 @@ module pochoco_soc #(
   wire clk;
   assign clk = i_Clk;
 
-  // Power-on reset
-  reg  [3:0] por_cnt = 4'b0;
-  wire       rst_ni;
+  // Power-on reset: las BRAM del iCE40 leen ceros durante ~3 us despues de
+  // configurar, asi que la CPU parte despues de 255 ciclos (10 us). El esclavo
+  // SPI no usa BRAM y sale de reset a los 16 ciclos, como en el repo base.
+  reg  [7:0] por_cnt   = 8'b0;
+  reg        spi_rst_q = 1'b0;
+  wire       rst_ni, spi_rst_ni;
   always @(posedge clk) begin
-    if (por_cnt != 4'hF) por_cnt <= por_cnt + 4'd1;
+    if (por_cnt != 8'hFF) por_cnt   <= por_cnt + 8'd1;
+    if (por_cnt == 8'd15) spi_rst_q <= 1'b1;
   end
-  assign rst_ni = (por_cnt == 4'hF);
+  assign rst_ni     = (por_cnt == 8'hFF);
+  assign spi_rst_ni = spi_rst_q;
 
   // Core-memory wiring
   wire        instr_req;
@@ -47,7 +53,7 @@ module pochoco_soc #(
   wire [3:0]  data_be;
   wire [31:0] data_addr, data_wdata, data_rdata;
 
-  espino_core #(.BootAddr(32'h0000_0000)) u_core (
+  espino_core #(.BootAddr(32'h0000_0000), .Variant(Variant)) u_core (
     .clk_i         (clk),
     .rst_ni        (rst_ni),
     .instr_req_o   (instr_req),
@@ -120,7 +126,7 @@ module pochoco_soc #(
   // SPI Slave
   pochoco_spi_slave u_spi (
     .clk_i      (clk),
-    .rst_ni     (rst_ni),
+    .rst_ni     (spi_rst_ni),
     .sel_i      (spi_sel),
     .req_i      (spi_req),
     .we_i       (data_we),

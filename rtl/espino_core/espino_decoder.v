@@ -8,7 +8,9 @@
 // Authors:
 // - Nicolás Villegas <navillegas@miuandes.cl>
 
-module espino_decoder (
+module espino_decoder #(
+  parameter Variant = 0   // 2: instruccion ema (custom-0)
+) (
   input  wire [31:0] instr_i,
 
   output reg         illegal_insn_o,
@@ -41,6 +43,7 @@ module espino_decoder (
   // Opcodes
   localparam [6:0] 
     OPCODE_LOAD   = 7'h03,
+    OPCODE_CUSTOM0 = 7'h0b,
     OPCODE_MISC   = 7'h0f,
     OPCODE_OPIMM  = 7'h13,
     OPCODE_AUIPC  = 7'h17,
@@ -76,7 +79,7 @@ module espino_decoder (
   localparam       OP_B_REG  = 1'b0, OP_B_IMM  = 1'b1;
 
   // Writeback data source
-  localparam [1:0] WD_ALU = 2'd0, WD_LSU = 2'd1, WD_PC4 = 2'd2;
+  localparam [1:0] WD_ALU = 2'd0, WD_LSU = 2'd1, WD_PC4 = 2'd2, WD_EMA = 2'd3;
 
   // LSU transfer size
   localparam [1:0] LSU_BYTE = 2'd0, LSU_HALF = 2'd1, LSU_WORD = 2'd2;
@@ -229,6 +232,14 @@ module espino_decoder (
         rf_we_o        = 1'b1;
         rf_wd_sel_o    = WD_PC4;
         if (funct3 != 3'b000) illegal_insn_o = 1'b1;
+      end
+
+      // ema rd, rs1, rs2, k: rd = rs1 + ((rs2 - rs1) >>> k), k = funct3 (5 o 6)
+      OPCODE_CUSTOM0: begin
+        if (Variant == 2 && funct7 == 7'b0 && (funct3 == 3'd5 || funct3 == 3'd6)) begin
+          rf_we_o     = 1'b1;
+          rf_wd_sel_o = WD_EMA;
+        end else illegal_insn_o = 1'b1;
       end
 
       OPCODE_MISC: begin

@@ -8,7 +8,9 @@
 // Authors:
 // - Nicolás Villegas <navillegas@miuandes.cl>
 
-module espino_id_stage (
+module espino_id_stage #(
+  parameter Variant = 0   // 1: shifter, 2: instruccion ema
+) (
   input  wire        clk_i,
   input  wire        rst_ni,
 
@@ -51,6 +53,7 @@ module espino_id_stage (
   localparam       OP_B_IMM  = 1'b1;
   localparam [1:0] WD_LSU    = 2'd1;
   localparam [1:0] WD_PC4    = 2'd2;
+  localparam [1:0] WD_EMA    = 2'd3;
 
   // Register addresses
   assign rf_raddr_a_o = instr_rdata_i[18:15];
@@ -79,7 +82,7 @@ module espino_id_stage (
   wire [1:0]  lsu_type_dec;
   wire        lsu_sign_dec;
 
-  espino_decoder u_decoder (
+  espino_decoder #(.Variant(Variant)) u_decoder (
     .instr_i        (instr_rdata_i),
     .illegal_insn_o (illegal_insn_o),
     .alu_operator_o (alu_operator),
@@ -112,7 +115,7 @@ module espino_id_stage (
 
   wire [31:0] alu_result;
   wire        alu_cmp_result;
-  espino_alu u_alu (
+  espino_alu #(.Variant(Variant)) u_alu (
     .operator_i   (alu_operator),
     .operand_a_i  (operand_a),
     .operand_b_i  (operand_b),
@@ -136,10 +139,26 @@ module espino_id_stage (
 
   wire commit = instr_valid_i & ~stall_i;
 
+  // Instruccion ema (Variant 2)
+  wire [31:0] ema_result;
+  generate
+    if (Variant == 2) begin : g_ema
+      espino_ema u_ema (
+        .acc_i    (rf_rdata_a_i),
+        .x_i      (rf_rdata_b_i),
+        .k_i      (instr_rdata_i[14:12]),
+        .result_o (ema_result)
+      );
+    end else begin : g_no_ema
+      assign ema_result = alu_result;
+    end
+  endgenerate
+
   always @* begin
     case (rf_wd_sel)
       WD_LSU:  rf_wdata_o = lsu_rdata_i;
       WD_PC4:  rf_wdata_o = pc_id_i + 32'd4;
+      WD_EMA:  rf_wdata_o = ema_result;
       default: rf_wdata_o = alu_result;
     endcase
   end
