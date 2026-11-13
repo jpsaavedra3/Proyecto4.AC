@@ -224,7 +224,7 @@ def figura_roofline(datos, bw, inten):
     ax.set_ylim(1e6, 6e7)
     ax.set_xlabel("Intensidad operacional (ops/byte)")
     ax.set_ylabel("Ops/s")
-    ax.legend(fontsize=7, loc="lower right")
+    ax.legend(fontsize=8, loc="lower right")
     ax.grid(True, which="both", lw=0.3)
     fig.tight_layout()
     fig.savefig(ruta("build", "roofline.png"), dpi=200)
