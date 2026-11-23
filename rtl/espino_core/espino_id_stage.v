@@ -146,7 +146,6 @@ module espino_id_stage #(
       espino_ema u_ema (
         .acc_i    (rf_rdata_a_i),
         .x_i      (rf_rdata_b_i),
-        .k_i      (instr_rdata_i[14:12]),
         .result_o (ema_result)
       );
     end else begin : g_no_ema

@@ -1,0 +1,260 @@
+{
+  "frozen": {
+    "config": {
+      "kind": "breakout",
+      "k": 8,
+      "entry": 2048,
+      "take": 0,
+      "stop": 0,
+      "out": 256,
+      "delay": 32
+    },
+    "selection": "best development score in round 2; validation checked at family level; holdout never tuned",
+    "split": {
+      "development": [
+        0,
+        12000
+      ],
+      "validation": [
+        12000,
+        16000
+      ],
+      "holdout": [
+        16000,
+        20000
+      ]
+    },
+    "neighbors": [
+      {
+        "config": {
+          "kind": "breakout",
+          "k": 7,
+          "entry": 2048,
+          "take": 0,
+          "stop": 0,
+          "out": 256,
+          "delay": 32
+        },
+        "development": {
+          "score": 0.024788825117090903,
+          "wealths": [
+            10356,
+            10841,
+            10227,
+            10442
+          ],
+          "orders": 27,
+          "dd": 1022
+        }
+      },
+      {
+        "config": {
+          "kind": "breakout",
+          "k": 8,
+          "entry": 1536,
+          "take": 0,
+          "stop": 0,
+          "out": 256,
+          "delay": 32
+        },
+        "development": {
+          "score": 0.0632637626302009,
+          "wealths": [
+            10702,
+            11759,
+            10794,
+            10352
+          ],
+          "orders": 24,
+          "dd": 1234
+        }
+      },
+      {
+        "config": {
+          "kind": "breakout",
+          "k": 8,
+          "entry": 2048,
+          "take": 0,
+          "stop": 0,
+          "out": 256,
+          "delay": 32
+        },
+        "development": {
+          "score": 0.05754620492537222,
+          "wealths": [
+            10976,
+            11223,
+            10635,
+            10358
+          ],
+          "orders": 19,
+          "dd": 1240
+        }
+      },
+      {
+        "config": {
+          "kind": "breakout",
+          "k": 8,
+          "entry": 2560,
+          "take": 0,
+          "stop": 0,
+          "out": 256,
+          "delay": 32
+        },
+        "development": {
+          "score": -0.0036326242025719723,
+          "wealths": [
+            10788,
+            10317,
+            9886,
+            10142
+          ],
+          "orders": 20,
+          "dd": 1344
+        }
+      },
+      {
+        "config": {
+          "kind": "breakout",
+          "k": 9,
+          "entry": 2048,
+          "take": 0,
+          "stop": 0,
+          "out": 256,
+          "delay": 32
+        },
+        "development": {
+          "score": 0.0027262301423552886,
+          "wealths": [
+            10686,
+            10821,
+            10104,
+            10022
+          ],
+          "orders": 20,
+          "dd": 1761
+        }
+      }
+    ]
+  },
+  "stress": {
+    "subida": {
+      "wealth": 13742,
+      "orders": 2,
+      "dd": 536
+    },
+    "bajada": {
+      "wealth": 9654,
+      "orders": 2,
+      "dd": 383
+    },
+    "lateral": {
+      "wealth": 11253,
+      "orders": 4,
+      "dd": 603
+    },
+    "cambio_tendencia": {
+      "wealth": 11550,
+      "orders": 2,
+      "dd": 665
+    },
+    "oscilacion": {
+      "wealth": 6537,
+      "orders": 24,
+      "dd": 3670
+    },
+    "constante": {
+      "wealth": 10000,
+      "orders": 0,
+      "dd": 0
+    }
+  },
+  "holdout": {
+    "score": -0.08231598247956574,
+    "wealths": [
+      9553,
+      9882
+    ],
+    "orders": 7,
+    "dd": 1679
+  },
+  "full": {
+    "wealth": 13291,
+    "orders": 46,
+    "dd": 3186
+  },
+  "first2000": {
+    "wealth": 10976,
+    "orders": 2,
+    "dd": 696
+  },
+  "blocks": [
+    {
+      "wealth": 10976,
+      "orders": 2,
+      "dd": 696
+    },
+    {
+      "wealth": 9410,
+      "orders": 6,
+      "dd": 901
+    },
+    {
+      "wealth": 12000,
+      "orders": 2,
+      "dd": 1005
+    },
+    {
+      "wealth": 10444,
+      "orders": 5,
+      "dd": 958
+    },
+    {
+      "wealth": 9349,
+      "orders": 6,
+      "dd": 1071
+    },
+    {
+      "wealth": 10368,
+      "orders": 2,
+      "dd": 546
+    },
+    {
+      "wealth": 9376,
+      "orders": 4,
+      "dd": 663
+    },
+    {
+      "wealth": 9843,
+      "orders": 2,
+      "dd": 588
+    },
+    {
+      "wealth": 9553,
+      "orders": 3,
+      "dd": 1679
+    },
+    {
+      "wealth": 9882,
+      "orders": 4,
+      "dd": 1279
+    }
+  ],
+  "sizing": {
+    "0": {
+      "wealth": 13291,
+      "orders": 46,
+      "dd": 3186
+    },
+    "1": {
+      "wealth": 13191,
+      "orders": 26,
+      "dd": 2789
+    },
+    "2": {
+      "wealth": 13095,
+      "orders": 32,
+      "dd": 3082
+    }
+  }
+}

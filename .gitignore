@@ -21,6 +21,12 @@ sim/sim
 *.vcd
 *.csv
 !tb/practica.csv
+!tb/practica_meta.csv
+!docs/results/*.json
+!docs/results/*.csv
+!docs/results/*.log
+!docs/style/*.json
+!research/*.json
 
 # Salidas de make
 build/

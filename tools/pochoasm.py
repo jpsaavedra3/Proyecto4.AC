@@ -281,7 +281,7 @@ def assemble_instruction(line, pc, labels):
             (funct7 << 5) | shamt
         )
 
-    # ema rd, rs1, rs2, k (custom-0, variante 2): rd = rs1 + ((rs2 - rs1) >>> k), k = 5 o 6
+    # EMA8 unsigned Q8 low 16 bits, custom-0 funct7=0 and funct3=0.
     if instruction == "ema":
 
         rd = parse_register(operands[0])
@@ -289,12 +289,12 @@ def assemble_instruction(line, pc, labels):
         rs2 = parse_register(operands[2])
         k = parse_immediate(operands[3])
 
-        if k not in (5, 6):
-            raise ValueError("ema solo implementa k = 5 y k = 6")
+        if k != 8:
+            raise ValueError("ema only implements k=8 on unsigned low-16-bit Q8 operands")
 
         return encode_r(
             0x0B,
-            k,
+            0,
             0b0000000,
             rd,
             rs1,

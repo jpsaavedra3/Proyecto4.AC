@@ -1,0 +1,61 @@
+{
+  "source": "GitHub docs/Informe_Proyecto4.pdf at c121d8214fc9687e374ba2d2dcce88ebc4279ee5",
+  "page_size_pt": [
+    596,
+    842
+  ],
+  "margins_pt": [
+    72,
+    72,
+    72,
+    72
+  ],
+  "body": {
+    "font": "Arial",
+    "size_pt": 11,
+    "leading_pt": 18.975,
+    "first_line_indent_pt": 36,
+    "alignment": "justified"
+  },
+  "main_heading": {
+    "font": "Calibri Bold",
+    "size_pt": 12
+  },
+  "subheading": {
+    "font": "Calibri Bold",
+    "size_pt": 11
+  },
+  "table": {
+    "font": "Arial",
+    "size_pt": 10,
+    "header_font": "Arial Bold",
+    "grid": "black",
+    "header_fill": "light gray"
+  },
+  "caption": {
+    "font": "Arial",
+    "size_pt": 10
+  },
+  "index_title": {
+    "font": "Calibri Bold",
+    "size_pt": 14
+  },
+  "numbering": {
+    "position": "top right",
+    "font": "Arial",
+    "size_pt": 11,
+    "cover_unnumbered": true,
+    "index_page_number": 1
+  },
+  "main_sections": [
+    "1. ALGORITMO DE PREDICCIÓN Y DECISIÓN",
+    "2. IMPLEMENTACIÓN EN ASSEMBLY",
+    "3. CO-DISEÑO HARDWARE/SOFTWARE"
+  ],
+  "subsections": [
+    "3.1 Dónde se gastan los ciclos",
+    "3.2 Alternativas de hardware",
+    "3.3 Roofline",
+    "3.4 Variante final"
+  ]
+}

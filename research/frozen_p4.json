@@ -1,0 +1,138 @@
+{
+  "config": {
+    "kind": "breakout",
+    "k": 8,
+    "entry": 2048,
+    "take": 0,
+    "stop": 0,
+    "out": 256,
+    "delay": 32
+  },
+  "selection": "best development score in round 2; validation checked at family level; holdout never tuned",
+  "split": {
+    "development": [
+      0,
+      12000
+    ],
+    "validation": [
+      12000,
+      16000
+    ],
+    "holdout": [
+      16000,
+      20000
+    ]
+  },
+  "neighbors": [
+    {
+      "config": {
+        "kind": "breakout",
+        "k": 7,
+        "entry": 2048,
+        "take": 0,
+        "stop": 0,
+        "out": 256,
+        "delay": 32
+      },
+      "development": {
+        "score": 0.024788825117090903,
+        "wealths": [
+          10356,
+          10841,
+          10227,
+          10442
+        ],
+        "orders": 27,
+        "dd": 1022
+      }
+    },
+    {
+      "config": {
+        "kind": "breakout",
+        "k": 8,
+        "entry": 1536,
+        "take": 0,
+        "stop": 0,
+        "out": 256,
+        "delay": 32
+      },
+      "development": {
+        "score": 0.0632637626302009,
+        "wealths": [
+          10702,
+          11759,
+          10794,
+          10352
+        ],
+        "orders": 24,
+        "dd": 1234
+      }
+    },
+    {
+      "config": {
+        "kind": "breakout",
+        "k": 8,
+        "entry": 2048,
+        "take": 0,
+        "stop": 0,
+        "out": 256,
+        "delay": 32
+      },
+      "development": {
+        "score": 0.05754620492537222,
+        "wealths": [
+          10976,
+          11223,
+          10635,
+          10358
+        ],
+        "orders": 19,
+        "dd": 1240
+      }
+    },
+    {
+      "config": {
+        "kind": "breakout",
+        "k": 8,
+        "entry": 2560,
+        "take": 0,
+        "stop": 0,
+        "out": 256,
+        "delay": 32
+      },
+      "development": {
+        "score": -0.0036326242025719723,
+        "wealths": [
+          10788,
+          10317,
+          9886,
+          10142
+        ],
+        "orders": 20,
+        "dd": 1344
+      }
+    },
+    {
+      "config": {
+        "kind": "breakout",
+        "k": 9,
+        "entry": 2048,
+        "take": 0,
+        "stop": 0,
+        "out": 256,
+        "delay": 32
+      },
+      "development": {
+        "score": 0.0027262301423552886,
+        "wealths": [
+          10686,
+          10821,
+          10104,
+          10022
+        ],
+        "orders": 20,
+        "dd": 1761
+      }
+    }
+  ]
+}

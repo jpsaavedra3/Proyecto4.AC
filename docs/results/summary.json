@@ -1,0 +1,234 @@
+{
+  "source_commit": "c121d8214fc9687e374ba2d2dcce88ebc4279ee5",
+  "series_sha256": "fed122e0a9861276d76b1396b264fd34077c280c80fe6b356b6971d55242da3f",
+  "strategy": "EMA8 breakout, entry +8, exit -1, warmup/cooldown 32",
+  "economy": {
+    "2000": {
+      "new": {
+        "wealth": 10976,
+        "orders": 2,
+        "fees": 10,
+        "max_drawdown": 696
+      },
+      "old": {
+        "wealth": 10574,
+        "orders": 8,
+        "fees": 40,
+        "max_drawdown": 252
+      },
+      "cash": {
+        "wealth": 10000,
+        "orders": 0,
+        "fees": 0,
+        "max_drawdown": 0
+      },
+      "buy_hold": {
+        "wealth": 11375,
+        "orders": 1,
+        "fees": 5,
+        "max_drawdown": 1560
+      }
+    },
+    "20000": {
+      "new": {
+        "wealth": 13291,
+        "orders": 46,
+        "fees": 230,
+        "max_drawdown": 3186
+      },
+      "old": {
+        "wealth": 7286,
+        "orders": 103,
+        "fees": 515,
+        "max_drawdown": 4077
+      },
+      "cash": {
+        "wealth": 10000,
+        "orders": 0,
+        "fees": 0,
+        "max_drawdown": 0
+      },
+      "buy_hold": {
+        "wealth": 9695,
+        "orders": 1,
+        "fees": 5,
+        "max_drawdown": 9300
+      }
+    }
+  },
+  "blocks": [
+    {
+      "start": 0,
+      "end": 1999,
+      "wealth": 10976,
+      "orders": 2,
+      "fees": 10,
+      "max_drawdown": 696
+    },
+    {
+      "start": 2000,
+      "end": 3999,
+      "wealth": 9410,
+      "orders": 6,
+      "fees": 30,
+      "max_drawdown": 901
+    },
+    {
+      "start": 4000,
+      "end": 5999,
+      "wealth": 12000,
+      "orders": 2,
+      "fees": 10,
+      "max_drawdown": 1005
+    },
+    {
+      "start": 6000,
+      "end": 7999,
+      "wealth": 10444,
+      "orders": 5,
+      "fees": 25,
+      "max_drawdown": 958
+    },
+    {
+      "start": 8000,
+      "end": 9999,
+      "wealth": 9349,
+      "orders": 6,
+      "fees": 30,
+      "max_drawdown": 1071
+    },
+    {
+      "start": 10000,
+      "end": 11999,
+      "wealth": 10368,
+      "orders": 2,
+      "fees": 10,
+      "max_drawdown": 546
+    },
+    {
+      "start": 12000,
+      "end": 13999,
+      "wealth": 9376,
+      "orders": 4,
+      "fees": 20,
+      "max_drawdown": 663
+    },
+    {
+      "start": 14000,
+      "end": 15999,
+      "wealth": 9843,
+      "orders": 2,
+      "fees": 10,
+      "max_drawdown": 588
+    },
+    {
+      "start": 16000,
+      "end": 17999,
+      "wealth": 9553,
+      "orders": 3,
+      "fees": 15,
+      "max_drawdown": 1679
+    },
+    {
+      "start": 18000,
+      "end": 19999,
+      "wealth": 9882,
+      "orders": 4,
+      "fees": 20,
+      "max_drawdown": 1279
+    }
+  ],
+  "variants": [
+    {
+      "variant": 0,
+      "name": "Software",
+      "cycles_mean": 117.3282,
+      "cycles_max": 174,
+      "instructions_mean": 51.93255,
+      "instructions_at_worst": 76,
+      "cpi": 2.259242036064087,
+      "cpi_at_worst": 2.289473684210526,
+      "time_mean_us": 4.693128,
+      "time_max_us": 6.96,
+      "bytes_mean": 12,
+      "useful_ops_per_tick": 5,
+      "ops_per_second": 1065387.5197949002,
+      "intensity_ops_per_byte": 0.4166666666666667,
+      "roofline_peak_ops": 12500000.0,
+      "roofline_bw_bytes": 50000000.0,
+      "roofline_upper_bound": 12500000.0,
+      "program_bytes": 240,
+      "lc": 1079,
+      "lc_total": 1280,
+      "bram": 8,
+      "lut": 910,
+      "fmax_mhz": 44.04,
+      "timing_25mhz_pass": true,
+      "bitstream_bytes": 32220
+    },
+    {
+      "variant": 1,
+      "name": "Shifter fijo de 8 bits",
+      "cycles_mean": 49.0307,
+      "cycles_max": 56,
+      "instructions_mean": 20.74455,
+      "instructions_at_worst": 25,
+      "cpi": 2.3635460880086576,
+      "cpi_at_worst": 2.24,
+      "time_mean_us": 1.9612280000000004,
+      "time_max_us": 2.24,
+      "bytes_mean": 12,
+      "useful_ops_per_tick": 5,
+      "ops_per_second": 2549423.1165371896,
+      "intensity_ops_per_byte": 0.4166666666666667,
+      "roofline_peak_ops": 12500000.0,
+      "roofline_bw_bytes": 50000000.0,
+      "roofline_upper_bound": 12500000.0,
+      "program_bytes": 148,
+      "lc": 1154,
+      "lc_total": 1280,
+      "bram": 8,
+      "lut": 977,
+      "fmax_mhz": 40.53,
+      "timing_25mhz_pass": true,
+      "bitstream_bytes": 32220,
+      "amdahl_fraction": 0.616272984670352,
+      "amdahl_predicted": 2.393378483130023,
+      "speedup_measured": 2.3929538024135897
+    },
+    {
+      "variant": 2,
+      "name": "EMA8 Q8 de 16 bits",
+      "cycles_mean": 59.0323,
+      "cycles_max": 66,
+      "instructions_mean": 25.7452,
+      "instructions_at_worst": 30,
+      "cpi": 2.2929439274117116,
+      "cpi_at_worst": 2.2,
+      "time_mean_us": 2.3612919999999997,
+      "time_max_us": 2.64,
+      "bytes_mean": 12,
+      "useful_ops_per_tick": 5,
+      "ops_per_second": 2117484.834573615,
+      "intensity_ops_per_byte": 0.4166666666666667,
+      "roofline_peak_ops": 37500000.0,
+      "roofline_bw_bytes": 50000000.0,
+      "roofline_upper_bound": 20833333.333333336,
+      "program_bytes": 168,
+      "lc": 1145,
+      "lc_total": 1280,
+      "bram": 8,
+      "lut": 976,
+      "fmax_mhz": 44.73,
+      "timing_25mhz_pass": true,
+      "bitstream_bytes": 32220,
+      "amdahl_fraction": 0.5139957827700417,
+      "amdahl_predicted": 1.987872318796381,
+      "speedup_measured": 1.9875254733425598
+    }
+  ],
+  "measured_sra_cycles_per_tick": 56.3062,
+  "compiler_note": "Windows Icarus 14 exited 0xC0000005 after DONE; explicit opt-in accepted fresh output only; vvp, assertions and every reference row must still pass.",
+  "external_hidden_assets_tested": false,
+  "board_programmed": false
+}

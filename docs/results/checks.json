@@ -1,0 +1,8 @@
+{
+  "official_checks": "4/4",
+  "official_ticks": 2000,
+  "rtl_ticks_per_variant": 20000,
+  "unit_vectors_per_block": 30000,
+  "all_reference_rows_match": true,
+  "compiler_exit_workaround": "explicit Windows post-DONE opt-in; simulator exit status and assertions remain mandatory"
+}

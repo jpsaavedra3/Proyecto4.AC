@@ -1,0 +1,122 @@
+[
+  {
+    "case": "official_meta",
+    "program": "trade",
+    "static_instructions": 60,
+    "program_bytes": 240,
+    "ticks": 20000,
+    "functional_ic_mean": 51.80875,
+    "functional_ic_max": 75,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "official_meta",
+    "program": "trade_shifter",
+    "static_instructions": 37,
+    "program_bytes": 148,
+    "ticks": 20000,
+    "functional_ic_mean": 20.617,
+    "functional_ic_max": 23,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "official_meta",
+    "program": "trade_ema",
+    "static_instructions": 42,
+    "program_bytes": 168,
+    "ticks": 20000,
+    "functional_ic_mean": 25.617,
+    "functional_ic_max": 28,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "extremes",
+    "program": "trade",
+    "static_instructions": 60,
+    "program_bytes": 240,
+    "ticks": 3640,
+    "functional_ic_mean": 65.67252747252748,
+    "functional_ic_max": 83,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "extremes",
+    "program": "trade_shifter",
+    "static_instructions": 37,
+    "program_bytes": 148,
+    "ticks": 3640,
+    "functional_ic_mean": 19.315384615384616,
+    "functional_ic_max": 24,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "extremes",
+    "program": "trade_ema",
+    "static_instructions": 42,
+    "program_bytes": 168,
+    "ticks": 3640,
+    "functional_ic_mean": 24.315384615384616,
+    "functional_ic_max": 29,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "constant",
+    "program": "trade",
+    "static_instructions": 60,
+    "program_bytes": 240,
+    "ticks": 2000,
+    "functional_ic_mean": 35.9385,
+    "functional_ic_max": 37,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "constant",
+    "program": "trade_shifter",
+    "static_instructions": 37,
+    "program_bytes": 148,
+    "ticks": 2000,
+    "functional_ic_mean": 20.9385,
+    "functional_ic_max": 22,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "constant",
+    "program": "trade_ema",
+    "static_instructions": 42,
+    "program_bytes": 168,
+    "ticks": 2000,
+    "functional_ic_mean": 25.9385,
+    "functional_ic_max": 27,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "range_1_255",
+    "program": "trade",
+    "static_instructions": 60,
+    "program_bytes": 240,
+    "ticks": 3640,
+    "functional_ic_mean": 69.57912087912088,
+    "functional_ic_max": 85,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "range_1_255",
+    "program": "trade_shifter",
+    "static_instructions": 37,
+    "program_bytes": 148,
+    "ticks": 3640,
+    "functional_ic_mean": 19.29313186813187,
+    "functional_ic_max": 24,
+    "all_decisions_and_states_match": true
+  },
+  {
+    "case": "range_1_255",
+    "program": "trade_ema",
+    "static_instructions": 42,
+    "program_bytes": 168,
+    "ticks": 3640,
+    "functional_ic_mean": 24.29313186813187,
+    "functional_ic_max": 29,
+    "all_decisions_and_states_match": true
+  }
+]
