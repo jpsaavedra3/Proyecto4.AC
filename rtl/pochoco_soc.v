@@ -9,8 +9,8 @@
 // - Nicolás Villegas <navillegas@miuandes.cl>
 
 module pochoco_soc #(
-  parameter NumWords   = 512,
-  parameter MemFile    = "../sw/trade.hex",
+  parameter NumWords   = 128,  // all variants fit in 512 bytes; checked by verify_isa.py
+  parameter MemFile    = "sw/trade.hex",
   parameter Variant    = 0      // 0: solo software, 1: shifter, 2: instruccion ema
 ) (
   input  wire       i_Clk,

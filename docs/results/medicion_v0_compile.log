@@ -1,0 +1,58 @@
+Using language generation: IEEE1800-2012,no-specify,no-interconnect,xtypes,icarus-misc
+PARSING INPUT
+Icarus Verilog Preprocessor version 14.0 (devel) (s20260301-1260-gfd4a65b20-dirty)
+
+Copyright (c) 1999-2026 Stephen Williams (steve@icarus.com)
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ELABORATING DESIGN
+RUNNING FUNCTORS
+ -F cprop ...
+ ... Iteration detected 0 optimizations.
+ ... Look for dangling constants
+ ... done
+ -F nodangle ...
+ ... scan for dangling signal and event nodes. (scomplete=F, ecomplete=F)
+ ... 1 iterations deleted 132 dangling signals and 0 events.
+ ... scan for dangling signal and event nodes. (scomplete=T, ecomplete=F)
+ ... 2 iterations deleted 132 dangling signals and 19 events.
+ ... done
+CALCULATING ISLANDS
+CODE GENERATION
+ ... invoking target_design
+DONE.
+STATISTICS
+lex_string: add_count=1570 hit_count=7730
+Icarus Verilog version 14.0 (devel) (s20260301-1260-gfd4a65b20-dirty)
+
+Copyright (c) 2000-2026 Stephen Williams (steve@icarus.com)
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+translate: C:\Users\Lenovo\DOCUME~1\Codex\2078B9~1\new-chat\work\TOOLCH~1\OSS-CA~1\lib\ivl\ivlpp -v -L -F"$PROJECT\build\tmp\ivrlg2574a" -f"$PROJECT\build\tmp\ivrlg574a" -p"$PROJECT\build\tmp\ivrli574a" |C:\Users\Lenovo\DOCUME~1\Codex\2078B9~1\new-chat\work\TOOLCH~1\OSS-CA~1\lib\ivl\ivl -v -C"$PROJECT\build\tmp\ivrlh574a" -C"C:\Users\Lenovo\DOCUME~1\Codex\2078B9~1\new-chat\work\TOOLCH~1\OSS-CA~1\lib\ivl\vvp.conf" -- -
+
+WARNING: Windows Icarus exit crash after code generation; validating fresh build\tb_med_v0 in vvp.

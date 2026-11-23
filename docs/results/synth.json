@@ -1,0 +1,32 @@
+[
+  {
+    "variant": 0,
+    "lc": 1079,
+    "lc_total": 1280,
+    "bram": 8,
+    "lut": 910,
+    "fmax_mhz": 44.04,
+    "timing_25mhz_pass": true,
+    "bitstream_bytes": 32220
+  },
+  {
+    "variant": 1,
+    "lc": 1154,
+    "lc_total": 1280,
+    "bram": 8,
+    "lut": 977,
+    "fmax_mhz": 40.53,
+    "timing_25mhz_pass": true,
+    "bitstream_bytes": 32220
+  },
+  {
+    "variant": 2,
+    "lc": 1145,
+    "lc_total": 1280,
+    "bram": 8,
+    "lut": 976,
+    "fmax_mhz": 44.73,
+    "timing_25mhz_pass": true,
+    "bitstream_bytes": 32220
+  }
+]

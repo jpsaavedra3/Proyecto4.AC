@@ -1,0 +1,2 @@
+PASS shifter: 30000 casos
+tb/tb_shifter.sv:39: $finish called at 30000 (1s)

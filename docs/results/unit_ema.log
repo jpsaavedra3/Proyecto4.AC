@@ -1,0 +1,2 @@
+PASS ema: 30000 casos
+tb/tb_ema.sv:33: $finish called at 30000 (1s)

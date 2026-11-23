@@ -1,5 +1,5 @@
 // Testbench del shifter de la variante 1 (espino_alu con Variant = 1):
-// compara SLL, SRL y SRA contra los operadores de SystemVerilog.
+// Fixed-8-bit extension: compare SLL8, SRL8 and SRA8 on all 32-bit operands.
 //   iverilog -g2012 -s tb_shifter -o /tmp/tb_shifter rtl/espino_core/espino_alu.v tb/tb_shifter.sv
 //   vvp -n /tmp/tb_shifter
 
@@ -21,7 +21,7 @@ module tb_shifter;
   initial begin
     for (int i = 0; i < 30000; i++) begin
       a  = $urandom;
-      b  = (i < 96) ? i % 32 : $urandom;   // todos los shamt y luego al azar
+      b  = 32'd8;
       op = ALU_SLL + i % 3;
       case (op)
         ALU_SLL: esperado = a << b[4:0];
@@ -35,7 +35,7 @@ module tb_shifter;
       end
     end
     if (errores == 0) $display("PASS shifter: 30000 casos");
-    else              $display("FAIL shifter: %0d errores", errores);
+    else              $fatal(1, "FAIL shifter: %0d errores", errores);
     $finish;
   end
 

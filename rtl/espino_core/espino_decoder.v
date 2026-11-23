@@ -234,9 +234,9 @@ module espino_decoder #(
         if (funct3 != 3'b000) illegal_insn_o = 1'b1;
       end
 
-      // ema rd, rs1, rs2, k: rd = rs1 + ((rs2 - rs1) >>> k), k = funct3 (5 o 6)
+      // EMA8 for unsigned Q8 low 16 bits, custom-0 funct3=0.
       OPCODE_CUSTOM0: begin
-        if (Variant == 2 && funct7 == 7'b0 && (funct3 == 3'd5 || funct3 == 3'd6)) begin
+        if (Variant == 2 && funct7 == 7'b0 && funct3 == 3'd0) begin
           rf_we_o     = 1'b1;
           rf_wd_sel_o = WD_EMA;
         end else illegal_insn_o = 1'b1;

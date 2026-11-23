@@ -12,12 +12,13 @@
 module tb_medicion;
 
   parameter string PROGRAMA   = "sw/trade.hex";
-  parameter string SERIE      = "tb/practica.csv";
+  parameter string SERIE      = "tb/practica_meta.csv";
   parameter string SALIDA     = "medicion.csv";
   parameter string PERFIL     = "perfil.csv";
+  parameter string LATENCIAS  = "latencias.csv";
   parameter int    VARIANTE   = 0;
   parameter int    PERIODO_NS = 100000;
-  parameter int    NTICKS     = 2000;
+  parameter int    NTICKS     = 20000;
 
   localparam int CAJA0    = 10000;
   localparam int COMISION = 5;
@@ -43,9 +44,13 @@ module tb_medicion;
     int fd, t, r;
     string encabezado;
     fd = $fopen(SERIE, "r");
-    if (fd == 0) begin $display("ERROR: no se encontro %s", SERIE); $finish; end
+    if (fd == 0) $fatal(1, "Cannot open %s", SERIE);
     r = $fgets(encabezado, fd);
-    for (int n = 0; n < NTICKS; n++) r = $fscanf(fd, "%d,%d\n", t, precio[n]);
+    for (int n = 0; n < NTICKS; n++) begin
+      r = $fscanf(fd, "%d,%d\n", t, precio[n]);
+      if (r != 2 || t != n || precio[n] < 1 || precio[n] > 255)
+        $fatal(1, "Invalid input row %0d in %s", n, SERIE);
+    end
     $fclose(fd);
   endtask
 
@@ -55,7 +60,8 @@ module tb_medicion;
     for (int b = 7; b >= 0; b--) begin
       mosi = enviar[b];
       #500 sclk = 1;
-      recibido[b] = (miso === 1'b1);
+      if (miso !== 1'b0 && miso !== 1'b1) $fatal(1, "MISO contains X/Z");
+      recibido[b] = miso;
       #500 sclk = 0;
     end
     #500 cs_n = 1;
@@ -86,26 +92,45 @@ module tb_medicion;
   longint perfil_ciclos [512];
   longint perfil_instr  [512];
   logic [31:0] pc_actual = 0;
+  bit respuesta_pendiente = 0;
+  int respuestas = 0;
+  int bytes_moved = 0;
+  int fl;
 
   always @(posedge clk) begin
     if (dut.u_core.instr_valid_id) pc_actual = dut.u_core.pc_id;
     if (dut.u_spi.byte_done) begin
-      midiendo = (precios < NTICKS - 1);   // el ultimo precio no tiene fila siguiente
+      if (respuesta_pendiente) $fatal(1, "Missing decision before next price");
+      if (dut.u_spi.new_price_q) $fatal(1, "Previous price was not read");
+      respuesta_pendiente = 1;
+      midiendo = 1; // include the final computed decision in LATENCIAS
       ciclos   = 0;
       instr    = 0;
+      bytes_moved = 0;
       precios++;
     end else if (midiendo) begin
       ciclos++;
+      // Scope: data/MMIO bus inside the same window; excludes instruction fetch.
+      // All transfers issued by these programs are 32-bit lw/sw operations.
+      if (dut.data_req) bytes_moved += 4;
       perfil_ciclos[pc_actual[10:2]]++;
       if (retira) begin
         instr++;
         perfil_instr[pc_actual[10:2]]++;
       end
       if (dut.u_spi.wr && dut.u_spi.off == 2) begin
+        if (ciclos >= (PERIODO_NS-SPI_NS)/40) $fatal(1, "Deadline missed");
         midiendo    = 0;
         ciclos_tick = ciclos;
         instr_tick  = instr;
+        $fdisplay(fl, "%0d,%0d,%0d,%0d,%0d,%02h", precios-1, dut.u_spi.price_q,
+                  ciclos, instr, bytes_moved, dut.data_wdata[7:0]);
       end
+    end
+    if (dut.u_spi.wr && dut.u_spi.off == 2) begin
+      if (!respuesta_pendiente) $fatal(1, "Duplicate or unsolicited decision");
+      respuesta_pendiente = 0;
+      respuestas++;
     end
   end
 
@@ -115,6 +140,9 @@ module tb_medicion;
   initial begin
     leer_serie();
     fd = $fopen(SALIDA, "w");
+    fl = $fopen(LATENCIAS, "w");
+    if (fd == 0 || fl == 0) $fatal(1, "Cannot open measurement output files");
+    $fdisplay(fl, "tick,precio,ciclos,instrucciones,bytes,decision_calculada");
     $fdisplay(fd, "tick,precio,decision,caja,acciones,patrimonio,ciclos,instrucciones");
     #4000;
     for (int n = 0; n < NTICKS; n++) begin
@@ -124,8 +152,15 @@ module tb_medicion;
       if (n == 0) $fdisplay(fd, "%0d,%0d,%02h,%0d,%0d,%0d,,", n, precio[n], decision, caja, acciones, w);
       else        $fdisplay(fd, "%0d,%0d,%02h,%0d,%0d,%0d,%0d,%0d", n, precio[n], decision, caja, acciones, w, ciclos_tick, instr_tick);
       #(PERIODO_NS - SPI_NS);
+      if (n % 1000 == 0) begin
+        $fflush(fd); $fflush(fl);
+        $display("Progress v%0d: %0d/%0d prices", VARIANTE, n+1, NTICKS);
+      end
     end
     $fclose(fd);
+    $fclose(fl);
+    if (respuestas != NTICKS || respuesta_pendiente)
+      $fatal(1, "Expected %0d responses, got %0d", NTICKS, respuestas);
     fp = $fopen(PERFIL, "w");
     $fdisplay(fp, "pc,ciclos,instrucciones");
     for (int i = 0; i < 512; i++)

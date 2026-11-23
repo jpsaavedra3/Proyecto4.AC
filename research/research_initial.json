@@ -1,0 +1,1740 @@
+{
+  "all": [
+    {
+      "config": {
+        "kind": "price",
+        "k": 8,
+        "band": 1536,
+        "exitband": 256
+      },
+      "score": 0.05530268069828275,
+      "wealths": [
+        10683,
+        11676,
+        10794,
+        10352
+      ],
+      "orders": 21,
+      "dd": 1154
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 7,
+        "band": 512
+      },
+      "score": 0.0522004951796031,
+      "wealths": [
+        10629,
+        12701,
+        10725,
+        9984
+      ],
+      "orders": 17,
+      "dd": 1430
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": 0.04390473935639592,
+      "wealths": [
+        10136,
+        14179,
+        10183,
+        9795
+      ],
+      "orders": 61,
+      "dd": 1910
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 9,
+        "band": 64
+      },
+      "score": 0.03905378741851634,
+      "wealths": [
+        10990,
+        11097,
+        11706,
+        9928
+      ],
+      "orders": 32,
+      "dd": 2056
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 9,
+        "band": 512
+      },
+      "score": 0.03196307929789126,
+      "wealths": [
+        10629,
+        11076,
+        12360,
+        9589
+      ],
+      "orders": 18,
+      "dd": 1772
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 6,
+        "band": 1536,
+        "exitband": 256
+      },
+      "score": 0.029404175418861766,
+      "wealths": [
+        10173,
+        11855,
+        10100,
+        10230
+      ],
+      "orders": 31,
+      "dd": 991
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 9,
+        "band": 256
+      },
+      "score": 0.027440817438598893,
+      "wealths": [
+        10688,
+        11152,
+        11905,
+        9671
+      ],
+      "orders": 24,
+      "dd": 1983
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 6,
+        "band": 1536,
+        "exitband": 0
+      },
+      "score": 0.026600273709849177,
+      "wealths": [
+        10275,
+        11273,
+        10206,
+        10270
+      ],
+      "orders": 34,
+      "dd": 923
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 9,
+        "band": 256
+      },
+      "score": 0.021131990892902335,
+      "wealths": [
+        10511,
+        11003,
+        12360,
+        9529
+      ],
+      "orders": 16,
+      "dd": 1973
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 512,
+        "exitband": 256,
+        "adapt": 7
+      },
+      "score": 0.020388201481792108,
+      "wealths": [
+        10343,
+        11371,
+        12209,
+        9336
+      ],
+      "orders": 12,
+      "dd": 1534
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 11,
+        "band": 512
+      },
+      "score": 0.01777972102279952,
+      "wealths": [
+        9990,
+        11371,
+        12209,
+        9732
+      ],
+      "orders": 8,
+      "dd": 1827
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 10,
+        "band": 512,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": 0.014369613267060337,
+      "wealths": [
+        10513,
+        12846,
+        9486,
+        9876
+      ],
+      "orders": 44,
+      "dd": 1680
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 512,
+        "exitband": 256,
+        "adapt": 9
+      },
+      "score": 0.01295014932458981,
+      "wealths": [
+        10343,
+        11371,
+        12209,
+        9164
+      ],
+      "orders": 14,
+      "dd": 1534
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 11,
+        "band": 512
+      },
+      "score": 0.012755267652192752,
+      "wealths": [
+        10167,
+        10758,
+        12305,
+        9775
+      ],
+      "orders": 12,
+      "dd": 1840
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 10,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": 0.011527964975562514,
+      "wealths": [
+        10167,
+        13542,
+        11075,
+        8860
+      ],
+      "orders": 53,
+      "dd": 1709
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 9,
+        "band": 64
+      },
+      "score": 0.009761359595623222,
+      "wealths": [
+        9752,
+        11225,
+        12360,
+        9518
+      ],
+      "orders": 20,
+      "dd": 1910
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 512,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": 0.00974554042583379,
+      "wealths": [
+        10343,
+        11371,
+        11151,
+        9557
+      ],
+      "orders": 26,
+      "dd": 1534
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 6,
+        "band": 768,
+        "exitband": 0
+      },
+      "score": 0.00961753075344911,
+      "wealths": [
+        10215,
+        12654,
+        10348,
+        9433
+      ],
+      "orders": 132,
+      "dd": 1445
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 6,
+        "band": 768,
+        "exitband": 256
+      },
+      "score": 0.008694117578638753,
+      "wealths": [
+        9859,
+        12663,
+        10508,
+        9474
+      ],
+      "orders": 107,
+      "dd": 1333
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 11,
+        "band": 256
+      },
+      "score": 0.006313133963077941,
+      "wealths": [
+        10285,
+        10694,
+        12360,
+        9596
+      ],
+      "orders": 14,
+      "dd": 1970
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 9,
+        "band": 512
+      },
+      "score": 0.004256279286689094,
+      "wealths": [
+        10291,
+        10921,
+        12209,
+        9402
+      ],
+      "orders": 14,
+      "dd": 1910
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 11,
+        "band": 64
+      },
+      "score": 0.0010208873184849587,
+      "wealths": [
+        9535,
+        11162,
+        12360,
+        9679
+      ],
+      "orders": 16,
+      "dd": 1910
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 512,
+        "exitband": 1024,
+        "adapt": 7
+      },
+      "score": 0.00030412281151333265,
+      "wealths": [
+        10343,
+        11371,
+        11339,
+        9252
+      ],
+      "orders": 14,
+      "dd": 1534
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 11,
+        "band": 256
+      },
+      "score": -0.0005152559827893022,
+      "wealths": [
+        9771,
+        11152,
+        12360,
+        9541
+      ],
+      "orders": 20,
+      "dd": 2112
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 128,
+        "exitband": 256,
+        "adapt": 7
+      },
+      "score": -0.0017278189938251948,
+      "wealths": [
+        10502,
+        11256,
+        11226,
+        9558
+      ],
+      "orders": 38,
+      "dd": 2298
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 8,
+        "band": 1536,
+        "exitband": 0
+      },
+      "score": -0.003101874616378429,
+      "wealths": [
+        10344,
+        10821,
+        10565,
+        9797
+      ],
+      "orders": 33,
+      "dd": 1144
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 8,
+        "band": 768,
+        "exitband": 0
+      },
+      "score": -0.0045308162733680435,
+      "wealths": [
+        8872,
+        13727,
+        10793,
+        9360
+      ],
+      "orders": 88,
+      "dd": 2116
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 4,
+        "band": 1536,
+        "exitband": 0
+      },
+      "score": -0.005413816035070398,
+      "wealths": [
+        9715,
+        10490,
+        10020,
+        10242
+      ],
+      "orders": 20,
+      "dd": 490
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 10,
+        "band": 128,
+        "exitband": 256,
+        "adapt": 7
+      },
+      "score": -0.005604487955015558,
+      "wealths": [
+        9945,
+        11205,
+        12452,
+        9104
+      ],
+      "orders": 32,
+      "dd": 1721
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 4,
+        "band": 1536,
+        "exitband": 256
+      },
+      "score": -0.006323754626064856,
+      "wealths": [
+        9660,
+        10647,
+        9878,
+        10452
+      ],
+      "orders": 20,
+      "dd": 705
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 10,
+        "band": 512,
+        "exitband": 256,
+        "adapt": 9
+      },
+      "score": -0.009515966181663709,
+      "wealths": [
+        10051,
+        11467,
+        12305,
+        8915
+      ],
+      "orders": 22,
+      "dd": 1832
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 7
+      },
+      "score": -0.010640847831979328,
+      "wealths": [
+        10700,
+        11845,
+        10196,
+        9534
+      ],
+      "orders": 44,
+      "dd": 2661
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 10,
+        "band": 512,
+        "exitband": 256,
+        "adapt": 7
+      },
+      "score": -0.010954331592679625,
+      "wealths": [
+        10051,
+        11467,
+        12305,
+        8883
+      ],
+      "orders": 20,
+      "dd": 1832
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 8,
+        "band": 768,
+        "exitband": 256
+      },
+      "score": -0.011351609354585563,
+      "wealths": [
+        10934,
+        9577,
+        11079,
+        10295
+      ],
+      "orders": 42,
+      "dd": 2865
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 10,
+        "band": 128,
+        "exitband": 256,
+        "adapt": 9
+      },
+      "score": -0.012745686521646673,
+      "wealths": [
+        9945,
+        11268,
+        12452,
+        8905
+      ],
+      "orders": 34,
+      "dd": 1721
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 128,
+        "exitband": 256,
+        "adapt": 9
+      },
+      "score": -0.015160586724030011,
+      "wealths": [
+        10136,
+        11256,
+        11226,
+        9445
+      ],
+      "orders": 32,
+      "dd": 2298
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 4,
+        "band": 768,
+        "exitband": 256
+      },
+      "score": -0.01663843080985381,
+      "wealths": [
+        10169,
+        10967,
+        9641,
+        10086
+      ],
+      "orders": 92,
+      "dd": 1212
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 10,
+        "band": 128,
+        "exitband": 256,
+        "adapt": 7
+      },
+      "score": -0.018604665992404235,
+      "wealths": [
+        10167,
+        11655,
+        12360,
+        8646
+      ],
+      "orders": 24,
+      "dd": 1827
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 7,
+        "slow": 11,
+        "band": 64
+      },
+      "score": -0.018793392307601308,
+      "wealths": [
+        9816,
+        9941,
+        12360,
+        9732
+      ],
+      "orders": 10,
+      "dd": 1914
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 10,
+        "band": 512,
+        "exitband": 1024,
+        "adapt": 7
+      },
+      "score": -0.01886185755189781,
+      "wealths": [
+        10051,
+        12573,
+        11285,
+        8629
+      ],
+      "orders": 25,
+      "dd": 1832
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 10,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 7
+      },
+      "score": -0.01909121753639971,
+      "wealths": [
+        10006,
+        12151,
+        10275,
+        9243
+      ],
+      "orders": 32,
+      "dd": 1437
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 8,
+        "band": 512,
+        "exitband": 1024,
+        "adapt": 7
+      },
+      "score": -0.021268833165564945,
+      "wealths": [
+        10189,
+        12834,
+        9565,
+        9160
+      ],
+      "orders": 39,
+      "dd": 1686
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 7,
+        "slow": 9,
+        "band": 64
+      },
+      "score": -0.021506251762608352,
+      "wealths": [
+        10289,
+        10334,
+        12305,
+        9134
+      ],
+      "orders": 14,
+      "dd": 1774
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 10,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 7
+      },
+      "score": -0.021565199257723124,
+      "wealths": [
+        10167,
+        12796,
+        11230,
+        8614
+      ],
+      "orders": 29,
+      "dd": 2175
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 7,
+        "slow": 11,
+        "band": 256
+      },
+      "score": -0.021744951915407658,
+      "wealths": [
+        9758,
+        10129,
+        12155,
+        9689
+      ],
+      "orders": 8,
+      "dd": 1914
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 7,
+        "band": 256
+      },
+      "score": -0.021971296298373303,
+      "wealths": [
+        10580,
+        9580,
+        11287,
+        10003
+      ],
+      "orders": 34,
+      "dd": 2547
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 10,
+        "band": 128,
+        "exitband": 256,
+        "adapt": 9
+      },
+      "score": -0.02241401400251658,
+      "wealths": [
+        10167,
+        11655,
+        12360,
+        8556
+      ],
+      "orders": 24,
+      "dd": 1827
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 11,
+        "band": 64
+      },
+      "score": -0.023613618125249557,
+      "wealths": [
+        9878,
+        10578,
+        12415,
+        9317
+      ],
+      "orders": 28,
+      "dd": 2480
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 8,
+        "band": 128,
+        "exitband": 256,
+        "adapt": 7
+      },
+      "score": -0.024831719840158313,
+      "wealths": [
+        10248,
+        9948,
+        10770,
+        10302
+      ],
+      "orders": 48,
+      "dd": 2647
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 8,
+        "band": 768,
+        "exitband": 256
+      },
+      "score": -0.025804430918908848,
+      "wealths": [
+        9039,
+        12481,
+        10688,
+        9301
+      ],
+      "orders": 62,
+      "dd": 2150
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 8,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 7
+      },
+      "score": -0.026628325137924125,
+      "wealths": [
+        9930,
+        11630,
+        9439,
+        9886
+      ],
+      "orders": 44,
+      "dd": 1513
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 8,
+        "band": 128,
+        "exitband": 256,
+        "adapt": 9
+      },
+      "score": -0.028713972042294665,
+      "wealths": [
+        10248,
+        9992,
+        10770,
+        10074
+      ],
+      "orders": 50,
+      "dd": 2667
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 8,
+        "band": 256,
+        "exitband": 256
+      },
+      "score": -0.02875892292492124,
+      "wealths": [
+        10224,
+        9803,
+        11004,
+        10385
+      ],
+      "orders": 78,
+      "dd": 3026
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 8,
+        "band": 512,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": -0.02950028557334336,
+      "wealths": [
+        10220,
+        11165,
+        9486,
+        9876
+      ],
+      "orders": 45,
+      "dd": 1914
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 10,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": -0.03029580975954447,
+      "wealths": [
+        9982,
+        11177,
+        9441,
+        9876
+      ],
+      "orders": 45,
+      "dd": 1144
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 4,
+        "band": 256,
+        "exitband": 256
+      },
+      "score": -0.03323853808293131,
+      "wealths": [
+        9994,
+        10663,
+        11115,
+        9165
+      ],
+      "orders": 341,
+      "dd": 1396
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 6,
+        "band": 1536,
+        "exitband": 256
+      },
+      "score": -0.033890435508598424,
+      "wealths": [
+        9770,
+        10586,
+        10303,
+        9528
+      ],
+      "orders": 25,
+      "dd": 1140
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 7,
+        "slow": 11,
+        "band": 512
+      },
+      "score": -0.03537209758086021,
+      "wealths": [
+        9819,
+        9580,
+        12209,
+        9689
+      ],
+      "orders": 8,
+      "dd": 1936
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 8,
+        "band": 768,
+        "exitband": 0
+      },
+      "score": -0.03629487963637501,
+      "wealths": [
+        10867,
+        9319,
+        10986,
+        9853
+      ],
+      "orders": 60,
+      "dd": 2614
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 8,
+        "band": 512,
+        "exitband": 256,
+        "adapt": 9
+      },
+      "score": -0.03654583638807156,
+      "wealths": [
+        10189,
+        10715,
+        10818,
+        9457
+      ],
+      "orders": 34,
+      "dd": 2358
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 8,
+        "band": 512,
+        "exitband": 256,
+        "adapt": 7
+      },
+      "score": -0.037543404307393655,
+      "wealths": [
+        10189,
+        10715,
+        10818,
+        9432
+      ],
+      "orders": 32,
+      "dd": 2358
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 6,
+        "band": 1536,
+        "exitband": 0
+      },
+      "score": -0.037555273955143346,
+      "wealths": [
+        9640,
+        10799,
+        10160,
+        9486
+      ],
+      "orders": 25,
+      "dd": 1166
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 7,
+        "slow": 9,
+        "band": 256
+      },
+      "score": -0.03951208609017784,
+      "wealths": [
+        9823,
+        10268,
+        12209,
+        9091
+      ],
+      "orders": 12,
+      "dd": 1827
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 8,
+        "band": 256,
+        "exitband": 0
+      },
+      "score": -0.04055392048627088,
+      "wealths": [
+        10377,
+        9491,
+        10963,
+        10297
+      ],
+      "orders": 122,
+      "dd": 3029
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 8,
+        "band": 1536,
+        "exitband": 0
+      },
+      "score": -0.041005857605691226,
+      "wealths": [
+        9491,
+        11257,
+        10495,
+        9178
+      ],
+      "orders": 36,
+      "dd": 1953
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 8,
+        "band": 1536,
+        "exitband": 256
+      },
+      "score": -0.041296918064546655,
+      "wealths": [
+        9806,
+        10861,
+        10494,
+        9188
+      ],
+      "orders": 30,
+      "dd": 1953
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 7,
+        "band": 64
+      },
+      "score": -0.04132797373988127,
+      "wealths": [
+        11066,
+        9270,
+        11468,
+        9489
+      ],
+      "orders": 82,
+      "dd": 3057
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 4,
+        "band": 1536,
+        "exitband": 256
+      },
+      "score": -0.04189868266354181,
+      "wealths": [
+        10371,
+        9980,
+        9690,
+        9528
+      ],
+      "orders": 14,
+      "dd": 766
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 4,
+        "slow": 8,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": -0.0461936469950634,
+      "wealths": [
+        9982,
+        10488,
+        9441,
+        9876
+      ],
+      "orders": 46,
+      "dd": 1144
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 10,
+        "band": 512,
+        "exitband": 256,
+        "adapt": 7
+      },
+      "score": -0.04734613183587386,
+      "wealths": [
+        10048,
+        10389,
+        12155,
+        8738
+      ],
+      "orders": 10,
+      "dd": 1827
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 4,
+        "band": 1536,
+        "exitband": 0
+      },
+      "score": -0.04962177703419039,
+      "wealths": [
+        10313,
+        9854,
+        9590,
+        9528
+      ],
+      "orders": 14,
+      "dd": 766
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 4,
+        "band": 768,
+        "exitband": 0
+      },
+      "score": -0.05301859066322706,
+      "wealths": [
+        9822,
+        10347,
+        9466,
+        9956
+      ],
+      "orders": 92,
+      "dd": 1363
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 10,
+        "band": 512,
+        "exitband": 256,
+        "adapt": 9
+      },
+      "score": -0.05359640851364648,
+      "wealths": [
+        10048,
+        10389,
+        12155,
+        8595
+      ],
+      "orders": 12,
+      "dd": 1827
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 4,
+        "band": 768,
+        "exitband": 256
+      },
+      "score": -0.05361165038123128,
+      "wealths": [
+        9318,
+        10524,
+        10902,
+        9288
+      ],
+      "orders": 88,
+      "dd": 1935
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 7,
+        "band": 256
+      },
+      "score": -0.05402137970236611,
+      "wealths": [
+        10893,
+        9296,
+        11118,
+        9408
+      ],
+      "orders": 62,
+      "dd": 2997
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 7,
+        "slow": 9,
+        "band": 512
+      },
+      "score": -0.0542896707709787,
+      "wealths": [
+        9512,
+        10249,
+        12047,
+        9088
+      ],
+      "orders": 12,
+      "dd": 2022
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 10,
+        "band": 512,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": -0.0575462108895834,
+      "wealths": [
+        10048,
+        10389,
+        11021,
+        8921
+      ],
+      "orders": 24,
+      "dd": 1827
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 6,
+        "band": 256,
+        "exitband": 256
+      },
+      "score": -0.05787383635216876,
+      "wealths": [
+        9979,
+        10274,
+        10773,
+        9505
+      ],
+      "orders": 153,
+      "dd": 2381
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 8,
+        "band": 256,
+        "exitband": 0
+      },
+      "score": -0.058929762658556345,
+      "wealths": [
+        8168,
+        12662,
+        11273,
+        9013
+      ],
+      "orders": 152,
+      "dd": 2032
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 6,
+        "band": 256,
+        "exitband": 256
+      },
+      "score": -0.05951986430658906,
+      "wealths": [
+        8477,
+        11510,
+        11255,
+        9468
+      ],
+      "orders": 177,
+      "dd": 1850
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 6,
+        "band": 256,
+        "exitband": 0
+      },
+      "score": -0.06460950376981289,
+      "wealths": [
+        8586,
+        11170,
+        11094,
+        9368
+      ],
+      "orders": 263,
+      "dd": 1555
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 4,
+        "band": 768,
+        "exitband": 0
+      },
+      "score": -0.06509193025152404,
+      "wealths": [
+        8846,
+        10753,
+        10799,
+        9335
+      ],
+      "orders": 104,
+      "dd": 1485
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 8,
+        "band": 256,
+        "exitband": 256
+      },
+      "score": -0.06598456405264705,
+      "wealths": [
+        8389,
+        11971,
+        11211,
+        8964
+      ],
+      "orders": 100,
+      "dd": 2191
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 10,
+        "band": 512,
+        "exitband": 1024,
+        "adapt": 7
+      },
+      "score": -0.06785609482909868,
+      "wealths": [
+        10048,
+        10389,
+        11231,
+        8674
+      ],
+      "orders": 12,
+      "dd": 1827
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 4,
+        "band": 256,
+        "exitband": 0
+      },
+      "score": -0.07039920693783361,
+      "wealths": [
+        9389,
+        9552,
+        10568,
+        9602
+      ],
+      "orders": 486,
+      "dd": 1333
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 3,
+        "slow": 7,
+        "band": 512
+      },
+      "score": -0.07104558412677056,
+      "wealths": [
+        10478,
+        9038,
+        11027,
+        9578
+      ],
+      "orders": 44,
+      "dd": 2963
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 6,
+        "band": 768,
+        "exitband": 256
+      },
+      "score": -0.08558593207611015,
+      "wealths": [
+        10533,
+        9921,
+        10717,
+        8600
+      ],
+      "orders": 93,
+      "dd": 2438
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 6,
+        "band": 256,
+        "exitband": 0
+      },
+      "score": -0.09481926135596841,
+      "wealths": [
+        9918,
+        9683,
+        10569,
+        9232
+      ],
+      "orders": 242,
+      "dd": 2822
+    },
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 7,
+        "band": 64
+      },
+      "score": -0.10001737648572738,
+      "wealths": [
+        10998,
+        8773,
+        10412,
+        9270
+      ],
+      "orders": 54,
+      "dd": 3102
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 6,
+        "band": 768,
+        "exitband": 0
+      },
+      "score": -0.11000386679234166,
+      "wealths": [
+        10572,
+        8958,
+        10436,
+        8858
+      ],
+      "orders": 119,
+      "dd": 3031
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 4,
+        "band": 256,
+        "exitband": 256
+      },
+      "score": -0.15014581527339765,
+      "wealths": [
+        8083,
+        10449,
+        10549,
+        9527
+      ],
+      "orders": 301,
+      "dd": 3646
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 4,
+        "band": 256,
+        "exitband": 0
+      },
+      "score": -0.18959836709129746,
+      "wealths": [
+        8042,
+        9631,
+        10323,
+        8958
+      ],
+      "orders": 482,
+      "dd": 3294
+    }
+  ],
+  "finalists": [
+    {
+      "config": {
+        "kind": "trend",
+        "k": 5,
+        "slow": 7,
+        "band": 512
+      },
+      "score": 0.0522004951796031,
+      "wealths": [
+        10629,
+        12701,
+        10725,
+        9984
+      ],
+      "orders": 17,
+      "dd": 1430,
+      "validation": {
+        "score": -0.1448716419831143,
+        "wealths": [
+          8978,
+          9353
+        ],
+        "orders": 6,
+        "dd": 1231
+      }
+    },
+    {
+      "config": {
+        "kind": "price",
+        "k": 8,
+        "band": 1536,
+        "exitband": 256
+      },
+      "score": 0.05530268069828275,
+      "wealths": [
+        10683,
+        11676,
+        10794,
+        10352
+      ],
+      "orders": 21,
+      "dd": 1154,
+      "validation": {
+        "score": -0.08209270197398424,
+        "wealths": [
+          9190,
+          9990
+        ],
+        "orders": 8,
+        "dd": 937
+      }
+    },
+    {
+      "config": {
+        "kind": "revert",
+        "k": 6,
+        "band": 768,
+        "exitband": 0
+      },
+      "score": 0.00961753075344911,
+      "wealths": [
+        10215,
+        12654,
+        10348,
+        9433
+      ],
+      "orders": 132,
+      "dd": 1445,
+      "validation": {
+        "score": -0.2765856425832882,
+        "wealths": [
+          9729,
+          7399
+        ],
+        "orders": 28,
+        "dd": 3049
+      }
+    },
+    {
+      "config": {
+        "kind": "adaptive",
+        "k": 6,
+        "slow": 8,
+        "band": 128,
+        "exitband": 1024,
+        "adapt": 9
+      },
+      "score": 0.04390473935639592,
+      "wealths": [
+        10136,
+        14179,
+        10183,
+        9795
+      ],
+      "orders": 61,
+      "dd": 1910,
+      "validation": {
+        "score": -0.0771217514085432,
+        "wealths": [
+          10056,
+          9304
+        ],
+        "orders": 8,
+        "dd": 1323
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "variant": 0,
+    "ticks": 20000,
+    "period_ns": 100000,
+    "cycles_mean": 117.3282,
+    "cycles_max": 174,
+    "reference_match": true
+  },
+  {
+    "variant": 1,
+    "ticks": 20000,
+    "period_ns": 100000,
+    "cycles_mean": 49.0307,
+    "cycles_max": 56,
+    "reference_match": true
+  },
+  {
+    "variant": 2,
+    "ticks": 20000,
+    "period_ns": 100000,
+    "cycles_mean": 59.0323,
+    "cycles_max": 66,
+    "reference_match": true
+  }
+]
